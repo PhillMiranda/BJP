@@ -1,0 +1,564 @@
+/* Definição de variáveis de cores */
+:root {
+    --primary-color: #466FD9;
+    --secondary-color: #466FD9;
+    --red: #FF6347;
+    --salmon: #FA8072;
+    --coral: #FF7F50;
+    --orange: #FF8C00;
+    --gold: #FFD700;
+    --uca:	#4B0082;
+    --green: #006400;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+/* Importação da fonte Nunito do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=nunito:wght@200;300;400;500;600&display=swap');
+
+/* Estilização global */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    filter: brightness(9.4);
+    width: 300px;
+    height: auto;
+    padding: 3em 2em;
+    margin-left: 20%;    
+}
+
+.confirmacao #id_logo {
+    /* Adicione estilos e animações específicos para a classe confirmacao */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.confirmacao #segundoTexto {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes surgir {
+    /* Defina os estágios da sua animação aqui */
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0; /* Opacidade inicial (0%) */
+    }
+    to {
+      opacity: 1; /* Opacidade final (100%) */
+    }
+  }
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilos para o título de introdução */
+.intro-title {
+    text-align: left;
+    font-size: 3.8em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.segundatela {
+    font-size: 3.2em;
+
+}
+
+.grupobtnconfirmarevoltar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.confirmar {
+    cursor: pointer;
+    width: 45%;
+    padding: 0.1rem 0.1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.confirmar:hover{
+    background-color: var(--green);
+}
+
+.retornar {
+    cursor: pointer;
+    width: 45%;
+    padding: 0.1rem 0.1rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.retornar:hover{
+    background-color: var(--red);
+}
+
+.textosdosbotoes {
+    font-size: medium;
+}
+
+/* Estilos para o texto de introdução */
+.intro-text {
+    font-size: 2.3em;
+    text-align: left;
+    background: #fff;
+    color: #466FD9;
+    padding: 7px 9px;
+    line-height: 1.3;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para um elemento com fundo amarelo */
+.tituloamarelo span {
+    background-color: #ffc400 !important;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 10%;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* Estilos para um container geral */
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilos para uma linha flexível */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+/* Estilos para colunas */
+.col {
+    width: 50%;
+}
+
+/* Estilos para centralizar elementos verticalmente */
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para o wrapper de um formulário */
+.form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+}
+
+/* Estilos para o formulário */
+.form {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1s;
+}
+
+.form button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+.form p {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+/* Estilos para o botão do formulário */
+
+/* Estilos para grupos de entrada de texto */
+.input-group {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--gray-2);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: var(--gray);
+    border-radius: .5rem;
+    border: 0.125rem solid var(--white);
+    outline: none;
+}
+
+.input-group input:focus {
+    border: 0.125rem solid var(--primary-color);
+}
+
+/* Estilos para uma coluna flexível */
+.flex-col {
+    flex-direction: column;
+}
+
+/* Estilos para elementos em diferentes estados (cadastro ou confirmacao) */
+.container.cadastro .form.cadastro,
+.container.cadastro .social-list.cadastro,
+.container.cadastro .social-list.cadastro>div,
+.container.confirmacao .form.confirmacao,
+.container.confirmacao .social-list.confirmacao,
+.container.confirmacao .social-list.confirmacao>div {
+    transform: scale(1);
+}
+
+/* Estilos para uma linha de conteúdo */
+.content-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 6;
+    width: 100%;
+}
+
+/* Estilos para texto */
+.text {
+    margin: 4rem;
+    color: var(--white);
+}
+
+.text h2 h3 h5 {
+    font-size: 3.0rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    transition: 1s ease-in-out;
+}
+
+.text p {
+    font-weight: 600;
+    transition: 1s ease-in-out;
+    transition-delay: .2s;
+}
+
+.img img {
+    width: 30vw;
+    transition: 1s ease-in-out;
+    transition-delay: .4s;
+}
+
+.text.cadastro h2,
+.text.cadastro h3,
+.text.cadastro h4,
+.text.cadastro p,
+.img.cadastro img {
+    transform: translateX(-250%);
+}
+
+.text.confirmacao h2,
+.text.confirmacao h3,
+.text.confirmacao h4,
+.text.confirmacao p,
+.img.confirmacao img {
+    transform: translateX(250%);
+}
+
+.container.cadastro .text.cadastro h2,
+.container.cadastro .text.cadastro h3,
+.container.cadastro .text.cadastro h4,
+.container.cadastro .text.cadastro p,
+.container.cadastro .img.cadastro img,
+.container.confirmacao .text.confirmacao h2,
+.container.confirmacao .text.confirmacao h3,
+.container.confirmacao .text.confirmacao h4,
+.container.confirmacao .text.confirmacao p,
+.container.confirmacao .img.confirmacao img {
+    transform: translateX(0);
+}
+
+/* Estilos para o fundo do container */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 110vh;
+    width: 300vw;
+    transform: translate(35%, 0);
+    background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: 1s ease-in-out;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-right-radius: max(50vw, 50vh);
+    border-top-left-radius: max(50vw, 50vh);
+}
+
+.container.cadastro::before {
+    transform: translate(0, 0);
+    right: 45%;
+}
+
+.container.confirmacao::before {
+    transform: translate(100%, -4%);
+    right: 60%;
+}
+
+/* Estilos para links adicionais (YouTube) */
+#source-link {
+    top: 60px;
+}
+
+#source-link>i {
+    color: rgb(94, 106, 210);
+}
+
+#yt-link {
+    top: 10px;
+}
+
+#yt-link>i {
+    color: rgb(219, 31, 106);
+}
+
+/* Estilos para links de metadados */
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+}
+
+.meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link>i,
+.meta-link>span {
+    height: 20px;
+    line-height: 20px;
+}
+
+.meta-link>span {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    transition: color 600ms;
+}
+
+/* Estilos para imagens de fundo */
+.backgroundPhill {
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(243, 243, 243);
+}
+
+/* Estilos para inverter elementos horizontalmente */
+.InvertePhill {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/* Estilos para uma lista de redes sociais */
+.social-list {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1.2s;
+}
+
+.social-list>div {
+    color: var(--white);
+    margin: 0 .5rem;
+    padding: .7rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.social-list>div:nth-child(1) {
+    transition-delay: 1.4s;
+}
+
+.social-list>div:nth-child(2) {
+    transition-delay: 1.6s;
+}
+
+.social-list>div:nth-child(3) {
+    transition-delay: 1.8s;
+}
+
+.social-list>div:nth-child(4) {
+    transition-delay: 2s;
+}
+
+.social-list>div>i {
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+.social-list>div:hover i {
+    transform: scale(1.5);
+}
+
+.facebook-bg {
+    background-color: var(--facebook-color);
+}
+
+.google-bg {
+    background-color: var(--google-color);
+}
+
+.twitter-bg {
+    background-color: var(--twitter-color);
+}
+
+.insta-bg {
+    background-color: var(--insta-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* Estilos para telas menores (máx. largura de 700px) */
+@media (max-width: 700px) {
+    .intro-title {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 1.1em;
+        padding: 7px 8px;
+        line-height: 0.7;
+        border-radius: 10px;
+    }
+
+    .container {
+        position: relative;
+        min-height: 70vh;
+        overflow: hidden;
+    }
+}
+
+/* Estilos responsivos para telas menores (máx. largura de 425px) */
+@media only screen and (max-width: 425px) {
+
+    .container::before,
+    .container.cadastro::before,
+    .container.confirmacao::before {
+        height: 100vh;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        z-index: 0;
+        transform: none;
+        right: 0;
+    }
+
+    .container.cadastro .col.cadastro,
+    .container.confirmacao .col.confirmacao {
+        transform: translateY(0);
+    }
+
+    .content-row {
+        align-items: flex-start !important;
+    }
+
+    .content-row .col {
+        transform: translateY(0);
+        background-color: unset;
+    }
+
+    .col {
+        width: 100%;
+        position: absolute;
+        padding: 2rem;
+        background-color: var(--white);
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        transform: translateY(100%);
+        transition: 1s ease-in-out;
+    }
+
+    .row {
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .form,
+    .social-list {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text {
+        margin: 0;
+    }
+
+    .text p {
+        display: none;
+    }
+
+    .text h2 {
+        margin: .5rem;
+        font-size: 2rem;
+
+    }
+}
